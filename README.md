@@ -14,14 +14,13 @@
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li>
 
   <li>Configure awscli <code>aws configure</code> and provide:
-    <code>
-      <ol>
-        <li><code>AWS Access Key ID: AXDJBJD************</code></li>
-        <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
-        <li><code>Default region name: us-east-1</code></li>
-        <li><code>Default output format: json</code></li>
-      </ol>
-    </code>  
+    <ol>
+      <li><code>AWS Access Key ID: AXDJBJD************</code></li>
+      <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
+      <li><code>Default region name: us-east-1</code></li>
+      <li><code>Default output format: json</code></li>
+    </ol>
+  
   </li>
   <li>Create two key-pairs naming convention [environment]-bastion [staging-bastion and dev-bastion] </li>
 </ul>
