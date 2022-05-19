@@ -77,10 +77,10 @@
   
   
   
-      | **Name**          | *Value*  |        
+      | Name              | Value    |        
       | ------------------|:--------:|
-      | *BRANCH*          | *master* | 
-      | *OPTIONAL_SCRIPT* | *true*   |
+      | BRANCH            |  master  | 
+      | *OPTIONAL_SCRIPT  |  true    |
 
  
   <li> On <code>dashboard/New Item/</code> and follow:
