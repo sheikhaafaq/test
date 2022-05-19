@@ -3,7 +3,7 @@
 
 ## TERRAFORM CODE IMPLEMENTATION ##
 <ol>
-  <li> ### PREREQUISITES ### </li>
+  <li> PREREQUISITES </li>
 
 #### Install tools in you local system ####
 <ul>
@@ -12,7 +12,7 @@
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li> 
 </ul>
   </li>
-  <li>#### STEPS TO FOLLOW ###</li>
+  <li> STEPS TO FOLLOW </li>
 <ol>
   <li>Configure credentials for awscli `aws configure`</li>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Clone the terraform code repository</a></li>
