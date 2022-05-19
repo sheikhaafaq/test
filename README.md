@@ -1,6 +1,6 @@
 
 # SURVEYSPARROW DOCUMENTATION #
-
+---
 ## Terraform code implementation #
 
 ### Prerequisites ###
@@ -58,6 +58,8 @@
   
   <li> Edit the configmap <code>aws-auth</code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system </code>  or add the user in the <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth.yaml">aws-auth.yaml</a></code> file and then Run <code><a href="https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html"> kubectl apply -f aws-auth.yaml</a></code></li> 
 </ol>
+
+---
 
 #### Configure jenkins pipeline ####
 <ol>
