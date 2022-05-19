@@ -14,13 +14,14 @@
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li>
 
   <li>Configure awscli <code>aws configure</code> and provide:
-    <ol>
-      <li><code>AWS Access Key ID: AXDJBJD************</code></li>
-      <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
-      <li><code>Default region name: us-east-1</code></li>
-      <li><code>Default output format: json</code></li>
-    </ol>
-  
+    <code>
+      <ol>
+        <li><code>AWS Access Key ID: AXDJBJD************</code></li>
+        <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
+        <li><code>Default region name: us-east-1</code></li>
+        <li><code>Default output format: json</code></li>
+      </ol>
+    </code>  
   </li>
   <li>Create two key-pairs naming convention [environment]-bastion [staging-bastion and dev-bastion] </li>
 </ul>
@@ -41,11 +42,11 @@
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
   <li>Run <code>terraform init</code></li>
   
-  <li>First deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster, comment the remaining portion of code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101"> main.tf from provider "kubernetes" to the end</a>. then Run <code>terraform apply --var-file example.tfvars (<a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/dev.tfvars">dev.tfvars</a>)</code>  see what are the resources to be deploying and approve.</li>
+  <li>In first phase deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster, comment the remaining portion of code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101"> main.tf from provider "kubernetes" to the end</a>. then Run <code>terraform apply --var-file example.tfvars (<a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/dev.tfvars">dev.tfvars</a>)</code>  see what are the resources to be deploying and approve.</li>
   <li> Export the kubeconfig <code>export KUBECONFIG=./kubeconfig_[environment]-eks-cluster</code>
   <li>Update the kubeconfig of eks-cluster <code>aws eks update-kubeconfig --region [region-code] --name [environment]-eks-cluster</code> </li>
   <li>Fill up the required variables in <code>[environment].tfvars</code> like <code>ecr-repository uri</code> and <code>acm-certicate-arn</code></li>
-  <li> Run <code>terraform apply --var-file example.tfvars</code> again to setup deployments inside eks-cluster and approve</li>
+  <li> In second phase, uncomment the remaining code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101">main.tf to the end then Run</a> <code>terraform apply --var-file [environment].tfvars</code> again to setup deployments inside eks-cluster and approve</li>
   <li> Edit the configmap <code>aws-auth</code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system </code>  or add the user in the <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth.yaml">aws-auth.yaml</a></code> file and then RUn <code>kubectl apply -f aws-auth.yaml</code></li> 
 </ol>
 
