@@ -13,16 +13,17 @@
   <li><a href="https://helm.sh/docs/intro/install/">Helm</a></li>
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li>
 
-  <li>Configure awscli <code>aws configure</code> and provide:
-    <code>
-      <ol>
-        <li><code>AWS Access Key ID: AXDJBJD************</code></li>
-        <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
-        <li><code>Default region name: us-east-1</code></li>
-        <li><code>Default output format: json</code></li>
-      </ol>
-    </code>  
-  </li>
+  <li>Configure awscli <code>aws configure</code> and provide:  </li>
+    
+    
+      | Key                      | Value                |        
+      | -------------------------|:--------------------:|
+      | AWS Access Key ID        |  AXDJBJD************ | 
+      | AWS Secret Access Key    |  HBDKJ4JD*******     |
+      | Default region name      |  us-east-1           | 
+      | Default output format    |  json                |
+       
+
   <li>Create two key-pairs naming convention [environment]-bastion [staging-bastion and dev-bastion] </li>
 </ul>
 
@@ -74,7 +75,6 @@
     </ul>
   </li>
   <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables  </li> 
-  
   
   
       | Name              | Value    |        
