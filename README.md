@@ -21,7 +21,7 @@
       <li>Default output format: json</li>
       </ol>  
   </li>
-  <li>Create two key-pairs naming convention \<environment>-bastion [staging-bastion and dev-bastion] </li>
+  <li>Create two key-pairs naming convention `<environment>-bastion` [staging-bastion and dev-bastion] </li>
 </ul>
 
 
