@@ -13,7 +13,7 @@
   <li><a href="https://helm.sh/docs/intro/install/">Helm</a></li>
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li>
 
-  <li>Configure credentials for awscli <code>aws configure</code> and provide:
+  <li>Configure awscli <code>aws configure</code> and provide:
       <ol>
       <li>AWS Access Key ID: AXDJBJD************</li>
       <li>AWS Secret Access Key: HBDKJ4JD*******</li>
@@ -21,7 +21,7 @@
       <li>Default output format: json</li>
       </ol>  
   </li>
-  <li>Create two key-pairs naming convention <environment>-bastion [staging-bastion and dev-bastion] </li>
+  <li>Create two key-pairs naming convention \<environment>-bastion [staging-bastion and dev-bastion] </li>
 </ul>
 
 
