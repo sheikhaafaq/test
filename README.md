@@ -76,10 +76,11 @@
   <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables  </li> 
   
   
-      | Name            | Value  |        
-      | ----------------|:------:|
-      | BRANCH          | master | 
-      | OPTIONAL_SCRIPT | true   |
+  
+      | **Name**          | *Value*  |        
+      | ------------------|:--------:|
+      | *BRANCH*          | *master* | 
+      | *OPTIONAL_SCRIPT* | *true*   |
 
  
   <li> On <code>dashboard/New Item/</code> and follow:
