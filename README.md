@@ -1,9 +1,10 @@
 
 # SURVEYSPARROW DOCUMENTATION #
-
+<ol>
 ## TERRAFORM CODE IMPLEMENTATION #
 
 ### PREREQUISITES ###
+<ol>
 #### Install tools in you local system ####
 <ul>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Kubectl</a></li>
@@ -59,4 +60,6 @@
   </li>
   <li>Click on `Build Now` and check the pipeline is working</li>
   <li>Also create Webhook in bitbucket for continuous integration and continuous deployment</li>
+ </ol>
+</ol>
 </ol>
