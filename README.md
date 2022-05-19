@@ -31,6 +31,7 @@
 #### Steps to follow ###
 <ol>
   <li><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/">Clone the terraform code repository</a></li>
+  
   <li>Go Inside Remote-Backend:
     <ul>
       <li>Run <code>terraform init</code> to install provider.</li>
@@ -40,21 +41,30 @@
   </li>
 
   <li>Go Inside <code>[environment]/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
+  
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
+  
   <li>Run <code>terraform init</code></li>
   
   <li>In first phase deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster, comment the remaining portion of code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101"> main.tf from provider "kubernetes" to the end</a>. then Run <code>terraform apply --var-file example.tfvars (<a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/dev.tfvars">dev.tfvars</a>)</code>  see what are the resources to be deploying and approve.</li>
+  
   <li> Export the kubeconfig <code>export KUBECONFIG=./kubeconfig_[environment]-eks-cluster</code>
+  
   <li>Update the kubeconfig of eks-cluster <code>aws eks update-kubeconfig --region [region-code] --name [environment]-eks-cluster</code> </li>
+  
   <li>Fill up the required variables in <code>[environment].tfvars</code> like <code>ecr-repository uri</code> and <code>acm-certicate-arn</code></li>
+  
   <li> In second phase, uncomment the remaining code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101">main.tf to the end then Run</a> <code>terraform apply --var-file [environment].tfvars</code> again to setup deployments inside eks-cluster and approve</li>
-  <li> Edit the configmap <code>aws-auth</code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system </code>  or add the user in the <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth.yaml">aws-auth.yaml</a></code> file and then RUn <code>kubectl apply -f aws-auth.yaml</code></li> 
+  
+  <li> Edit the configmap <code>aws-auth</code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system </code>  or add the user in the <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth.yaml">aws-auth.yaml</a></code> file and then Run <code><a href="https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html"> kubectl apply -f aws-auth.yaml</a></code></li> 
 </ol>
 
 #### Configure jenkins pipeline ####
 <ol>
   <li>Login to jenkins server</li>
+  
   <li>Go inside <code>Manage jenkins/Manage Plugins/available</code> and install <code>nodejs</code> and <code>bitbucket</code> plugins</a></li>
+  
   <li>Go inside <code>Manage jenkins/Global Tool Configuration/NodeJs</code>and follow:
     <ul>
        <li><code>Name: 14.16.0</code></li>
@@ -63,7 +73,7 @@
        <li>Save</li>
     </ul>
   </li>
-  <li>
+ <li>
     Go inside <code>Manage jenkins/Credentials</code> Add credentials and follow:
     <ul>
       <li><code>Kind: Username with password</code></li>
