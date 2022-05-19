@@ -9,7 +9,8 @@
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Kubectl</a></li>
   <li><a href="https://helm.sh/docs/intro/install/">Helm</a></li>
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li> 
-<ul>
+</ul>
+
 
 #### STEPS TO FOLLOW ###
 <ol>
@@ -23,7 +24,7 @@
   <li> Export the kubeconfig `export KUBECONFIG=./kubeconfig_dev-eks-cluster`
   <li>Update the kubeconfig of eks-cluster `aws eks update-kubeconfig --region [region-code] --name dev-eks-cluster </li>
   <li> Run `terraform apply --var-file dev.tfvars` again to setup deployments inside eks-cluster and approve</li>
-<ol>
+</ol>
 
 #### CONFIGURE JENKINS PIPELINE ####
 <ol>
@@ -58,4 +59,4 @@
   </li>
   <li>Click on `Build Now` and check the pipeline is working</li>
   <li>Also create Webhook in bitbucket for continuous integration and continuous deployment</li>
-<ol>
+</ol>
