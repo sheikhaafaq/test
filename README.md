@@ -28,7 +28,7 @@
   <li>Update the kubeconfig of eks-cluster <code>aws eks update-kubeconfig --region [region-code] --name example-eks-cluster</code> </li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>ecr-repository uri</code> and <code>acm-certicate-arn</code></li>
   <li> Run <code>terraform apply --var-file example.tfvars</code> again to setup deployments inside eks-cluster and approve</li>
-  <li> Edit the configmap <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth">aws-auth</a></code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system</code> </li> 
+  <li> Edit the configmap <code>aws-auth</code> for users to access eks-cluster <code>kubectl edit cm aws-auth -n kube-system </code>  or add the user in the <code><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/aws-auth.yaml">aws-auth.yaml</a></code> file and then RUn <code>kubectl apply -f aws-auth.yaml</code></li> 
 </ol>
 
 #### Configure jenkins pipeline ####
