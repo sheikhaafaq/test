@@ -11,19 +11,36 @@
   <li><a href="https://git-scm.com/downloads">git</a></li>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Kubectl</a></li>
   <li><a href="https://helm.sh/docs/intro/install/">Helm</a></li>
-  <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li> 
+  <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li>
+
+  <li>Configure credentials for awscli <code>aws configure</code> and provide:
+      <ol>
+      <li>AWS Access Key ID: AXDJBJD************</li>
+      <li>AWS Secret Access Key: HBDKJ4JD*******</li>
+      <li>Default region name: us-east-1</li>
+      <li>Default output format: json</li>
+      </ol>  
+  </li>
+  <li>Create two key-pairs naming convention <environment>-bastion [staging-bastion and dev-bastion] </li>
 </ul>
 
 
 #### Steps to follow ###
 <ol>
-  <li>Configure credentials for awscli <code>aws configure</code></li>
   <li><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/">Clone the terraform code repository</a></li>
-  <li>Go Inside <code>example-environment/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
+  <li>Go Inside Remote-Backend:
+    <ul>
+      <li>Run <code>terraform init</code> to install provider.</li>
+      <li>Run <code>terraform apply --var-file dev.tfvars</code> to create remote backend in S3 and DynamoDB for dev environment.</li>
+      <li>Run <code>terraform apply --var-file staging.tfvars</code> to create remote backend in S3 and DynamoDB for staging environment</li>
+    </ul>
+  </li>
+
+  <li>Go Inside <code><environment>/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
   <li>Run <code>terraform init</code></li>
-  <li>Run <code>terraform plan --var-file example.tfvars (<a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/dev.tfvars">dev.tfvars</a>)</code> and see what are the resources to be deploying</li>
-  <li>Run <code>terraform apply --var-file example.tfvars</code> to deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster</li>
+  
+  <li>First deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster, comment the remaining portion of code in <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/main.tf#lines-101"> main.tf from provider "kubernetes"</a>. then Run <code>terraform apply --var-file example.tfvars (<a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/dev.tfvars">dev.tfvars</a>)</code>  see what are the resources to be deploying and approve.</li>
   <li> Export the kubeconfig <code>export KUBECONFIG=./kubeconfig_example-eks-cluster</code>
   <li>Update the kubeconfig of eks-cluster <code>aws eks update-kubeconfig --region [region-code] --name example-eks-cluster</code> </li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>ecr-repository uri</code> and <code>acm-certicate-arn</code></li>
