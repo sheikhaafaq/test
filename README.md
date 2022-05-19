@@ -21,7 +21,7 @@
       <li>Default output format: json</li>
       </ol>  
   </li>
-  <li>Create two key-pairs naming convention `<environment>-bastion` [staging-bastion and dev-bastion] </li>
+  <li>Create two key-pairs naming convention [environment]-bastion [staging-bastion and dev-bastion] </li>
 </ul>
 
 
@@ -36,7 +36,7 @@
     </ul>
   </li>
 
-  <li>Go Inside <code><environment>/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
+  <li>Go Inside <code>[environment]/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
   <li>Run <code>terraform init</code></li>
   
