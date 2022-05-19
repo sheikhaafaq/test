@@ -39,7 +39,7 @@
     </ul>
   </li>
   <li>
-    Go inside `Manage jenkins/Credentials` Add credentials and follow:
+    Go inside <code>Manage jenkins/Credentials</code> Add credentials and follow:
     <ul>
       <li><code>Kind: Username with password</code></li>
       <li><code>Scope:ss-comprinno</code></li>
