@@ -36,7 +36,7 @@
        <li>Version: NodeJS 14.16.0</li> 
        <li>Global npm packages to install: npm@6.14.12</li>
        <li>Save</li>
-    <ul>
+    </ul>
   </li>
   <li>
     Go inside `Manage jenkins/Credentials` Add credentials and follow:
@@ -46,7 +46,7 @@
         <li>Password: `bitbucket-repository-password`
         <li>ID: BitBuketCredsForDockerfile</li>
         <li>Description: BitBuket Credentials for cloning repositories</li>
-    <ul>
+    </ul>
   </li>
   <li> On dashboard/New Item/ and follow:
   <ul>
@@ -55,7 +55,7 @@
     <li>Build Triggers: Build when a change is pushed to BitBucket</li>
     <li>Copy the dev-pipeline script in the terraform code repository and paste inside pipeline block</li>
     <li>Save</li>
-  <ul> 
+  </ul> 
   </li>
   <li>Click on `Build Now` and check the pipeline is working</li>
   <li>Also create Webhook in bitbucket for continuous integration and continuous deployment</li>
