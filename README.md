@@ -1,10 +1,10 @@
 
 # SURVEYSPARROW DOCUMENTATION #
-<ol>
-## TERRAFORM CODE IMPLEMENTATION #
 
-### PREREQUISITES ###
+## TERRAFORM CODE IMPLEMENTATION ##
 <ol>
+<li>### PREREQUISITES ###
+
 #### Install tools in you local system ####
 <ul>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Kubectl</a></li>
