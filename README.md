@@ -19,7 +19,7 @@
 <ol>
   <li>Configure credentials for awscli <code>aws configure</code></li>
   <li><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/">Clone the terraform code repository</a></li>
-  <li>Go Inside <code>example-environment/example (like dev-environment/dev/)</code> directory</li>
+  <li>Go Inside <code>example-environment/example (like <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev/">dev-environment/dev/</a>)</code> directory</li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
   <li>Run <code>terraform init</code></li>
   <li>Run <code>terraform plan --var-file example.tfvars (dev.tfvars)</code> and see what are the resources to be deploying</li>
@@ -59,7 +59,7 @@
     <li><code>Item Name: dev-surveysparrow-pipeline</code></li>
     <li><code>Type: Pipeline</code></li>
     <li><code>Build Triggers: Build when a change is pushed to BitBucket</code></li>
-    <li>Copy the pipeline script <code> dev-pipline or staging-pipeline</code> in the terraform code repository and paste inside pipeline block</li>
+    <li>Copy the pipeline script <code> <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/development-environment/dev-pipeline">dev-pipline</a> or <a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/staging-enviroment/staging-pipeline">staging-pipline</a></code> in the terraform code repository and paste inside pipeline block</li>
     <li>Save</li>
   </ul> 
   </li>
