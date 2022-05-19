@@ -21,7 +21,7 @@
   <li><a href="https://bitbucket.org/surveysparrow/surveysparrow-comprinno-iac/src/master/">Clone the terraform code repository</a></li>
   <li>Go Inside <code>dev</code> directory</li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
-  <li>For bastion instance keys must be already created in aws account, key naming convention environment-bastion [staging-bastion or dev-bastion]</li>
+  <li>For bastion instance keys must be already created in aws account, key naming convention environment-bastion <code>staging-bastion or dev-bastion</code></li>
   <li>Run <code>terraform init</code></li>
   <li>Run <code>terraform plan --var-file example.tfvars</code> and see what are the resources to be deploying</li>
   <li>Run <code>terraform apply --var-file example.tfvars</code> to deploy base setup like Vpc, Bastion, Ecr, and Eks-Cluster</li>
