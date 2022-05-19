@@ -73,14 +73,14 @@
       <li><code>Description: BitBuket Credentials for cloning repositories</code></li>
     </ul>
   </li>
-  <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables 
+  <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables  </li> 
       
       | Name            | Value  |        
       | ----------------|:------:|
       | BRANCH          | master | 
       | OPTIONAL_SCRIPT | true   |
 
-  </li> 
+ 
   <li> On <code>dashboard/New Item/</code> and follow:
   <ul>
     <li><code>Item Name: dev-surveysparrow-pipeline</code></li>
