@@ -74,10 +74,11 @@
     </ul>
   </li>
   <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables 
-    <ol>
-      <li>Name: BRANCH, Value: master</li>
-      <li>Name: OPTIONAL_SCRIPT, Value:true</li>
-    </ol>
+      | Name       | Value         
+      | ------------- |:-------------:|
+      | BRANCH     | master | 
+      | OPTIONAL_SCRIPT    |true      |
+
   </li> 
   <li> On <code>dashboard/New Item/</code> and follow:
   <ul>
