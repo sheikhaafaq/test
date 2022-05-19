@@ -16,10 +16,10 @@
   <li>Configure awscli <code>aws configure</code> and provide:
     <code>
       <ol>
-        <li>AWS Access Key ID: AXDJBJD************</li>
-        <li>AWS Secret Access Key: HBDKJ4JD*******</li>
-        <li>Default region name: us-east-1</li>
-        <li>Default output format: json</li>
+        <li><code>AWS Access Key ID: AXDJBJD************</code></li>
+        <li><code>AWS Secret Access Key: HBDKJ4JD*******</code></li>
+        <li><code>Default region name: us-east-1</code></li>
+        <li><code>Default output format: json</code></li>
       </ol>
     </code>  
   </li>
