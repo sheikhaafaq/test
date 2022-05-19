@@ -18,7 +18,7 @@
 #### Steps to follow ###
 <ol>
   <li>Configure credentials for awscli <code>aws configure</code></li>
-  <li><a href="[https://kubernetes.io/docs/tasks/tools/](https://ss-comprinno@bitbucket.org/surveysparrow/surveysparrow-comprinno-iac.git)">Clone the terraform code repository</a></li>
+  <li><a href="https://ss-comprinno@bitbucket.org/surveysparrow/surveysparrow-comprinno-iac.git">Clone the terraform code repository</a></li>
   <li>Go Inside <code>dev</code> directory</li>
   <li>Fill up the required variables in <code>example.tfvars</code> like <code>profile</code> and <code>region</code></li>
   <li>Run <code>terraform init</code></li>
