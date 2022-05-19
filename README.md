@@ -3,8 +3,7 @@
 
 ## TERRAFORM CODE IMPLEMENTATION ##
 <ol>
-<li>
-  ### PREREQUISITES ###
+  <li> ### PREREQUISITES ### </li>
 
 #### Install tools in you local system ####
 <ul>
@@ -13,8 +12,7 @@
   <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Aws-Iam-Authenticator</a></li> 
 </ul>
   </li>
-<li>
-#### STEPS TO FOLLOW ###
+  <li>#### STEPS TO FOLLOW ###</li>
 <ol>
   <li>Configure credentials for awscli `aws configure`</li>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Clone the terraform code repository</a></li>
@@ -28,8 +26,7 @@
   <li> Run `terraform apply --var-file dev.tfvars` again to setup deployments inside eks-cluster and approve</li>
 </ol>
 </li>
-<li>  
-#### CONFIGURE JENKINS PIPELINE ####
+<li> #### CONFIGURE JENKINS PIPELINE #### </li>
 <ol>
   <li>Login to jenkins server</li>
   <li>Go inside `Manage jenkins/Manage Plugins/available` and install `nodejs` and `bitbucket` plugins</a></li>
@@ -63,6 +60,5 @@
   <li>Click on `Build Now` and check the pipeline is working</li>
   <li>Also create Webhook in bitbucket for continuous integration and continuous deployment</li>
  </ol>
- </li>
 </ol>
 </ol>
