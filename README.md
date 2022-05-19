@@ -16,7 +16,7 @@
 <ol>
   <li>Configure credentials for awscli `aws configure`</li>
   <li><a href="https://kubernetes.io/docs/tasks/tools/">Clone the terraform code repository</a></li>
-  <li>Go Inside <code>dev<code> directory</li>
+  <li>Go Inside <code>dev</code> directory</li>
   <li>Fill up the required variables in `dev.tfvars`like `profile` and `region`</li>
   <li>Run `terraform init`</li>
   <li>Run `terraform plan --var-file dev.tfvars` and see what are the resources to be deploying</li>
