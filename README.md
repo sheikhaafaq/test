@@ -74,6 +74,7 @@
     </ul>
   </li>
   <li>Go Inside <code>Configure System/Global properties/Environment variables</code> and set two environment variables 
+      
       | Name       | Value         
       | ------------- |:-------------:|
       | BRANCH     | master | 
